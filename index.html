@@ -34,18 +34,36 @@
             background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transform: translateY(-20px); /* Başlangıçta yukarıda */
-            opacity: 0; /* Başlangıçta görünmez */
-            transition: transform 0.5s ease, opacity 0.5s ease; /* Geçiş efekti */
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
         .container.loaded {
-            transform: translateY(0); /* Yükleme tamamlandığında normal konumuna döner */
-            opacity: 1; /* Yükleme tamamlandığında görünür */
+            transform: translateY(0);
+            opacity: 1;
         }
         h2 {
             color: #35424a;
             border-bottom: 2px solid #35424a;
             padding-bottom: 5px;
+        }
+        .post {
+            border-bottom: 1px solid #eaeaea;
+            padding: 15px 0;
+        }
+        .post:last-child {
+            border-bottom: none;
+        }
+        .post h3 {
+            margin: 0;
+            color: #35424a;
+        }
+        .post .author {
+            color: #888;
+            font-size: 14px;
+        }
+        .post p {
+            margin: 5px 0 0;
         }
         footer {
             text-align: center;
@@ -73,18 +91,23 @@
     <h2>Hoş Geldiniz!</h2>
     <p>Forum Tahsin'e hoş geldiniz! Burada çeşitli konular hakkında tartışabilir ve yeni gönderiler oluşturabilirsiniz.</p>
     <p>Hemen yeni bir gönderi oluşturmak için yukarıdaki bağlantılara tıklayın.</p>
+
+    <h2>Son Gönderiler</h2>
+    <div class="post">
+        <h3>İlk Gönderi Başlığı</h3>
+        <p class="author">Yazar: @kullanici1 | Tarih: 01.01.2023</p>
+        <p>Bu, ilk gönderinin içeriğidir. Burada çeşitli konular hakkında tartışabiliriz.</p>
+    </div>
+    <div class="post">
+        <h3>İkinci Gönderi Başlığı</h3>
+        <p class="author">Yazar: @kullanici2 | Tarih: 02.01.2023</p>
+        <p>İkinci gönderinin içeriği burada yer alıyor. Tartışmak istediğiniz konular varsa yazabilirsiniz.</p>
+    </div>
+    <div class="post">
+        <h3>Üçüncü Gönderi Başlığı</h3>
+        <p class="author">Yazar: @kullanici3 | Tarih: 03.01.2023</p>
+        <p>Üçüncü gönderi içeriği burada. Bu forumda ilginç tartışmalar yapabiliriz.</p>
+    </div>
 </div>
 
 <footer>
-    <p>Forum Tahsin &copy; 2023</p>
-</footer>
-
-<script>
-    // Sayfa yüklendiğinde container'a 'loaded' sınıfını ekle
-    window.onload = function() {
-        document.getElementById('main-container').classList.add('loaded');
-    };
-</script>
-
-</body>
-</html>
