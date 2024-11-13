@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategoriler - Forum Tahsin</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-20px); /* Başlangıçta yukarıda */
+            opacity: 0; /* Başlangıçta görünmez */
+            transition: transform 0.5s ease, opacity 0.5s ease; /* Geçiş efekti */
+        }
+        .container.loaded {
+            transform: translateY(0); /* Yükleme tamamlandığında normal konumuna döner */
+            opacity: 1; /* Yükleme tamamlandığında görünür */
+        }
+        h2 {
+            color: #35424a;
+            border-bottom: 2px solid #35424a;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Forum Tahsin - Kategoriler</h1>
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="kategoriler.html">Kategoriler</a>
+        <a href="yeni-gonderi.html">Yeni Gönderi</a>
+        <a href="iletişim.html">İletişim</a>
+        <a href="logout.html">Çıkış</a>
+    </nav>
+</header>
+
+<div class="container" id="main-container">
+    <h2>Kategoriler</h2>
+    <p>Forumumuzda yer alan kategorileri burada bulabilirsiniz.</p>
+    
+    <ul>
+        <li>Genel Tartışmalar</li>
+        <li>Teknoloji</li>
+        <li>Oyunlar</li>
+        <li>Kültür ve Sanat</li>
+        <li>Yardım ve Destek</li>
+    </ul>
+</div>
+
+<footer>
+    <p>Forum Tahsin &copy; 2023</p>
+</footer>
+
+<script>
+    // Sayfa yüklendiğinde container'a 'loaded' sınıfını ekle
+    window.onload = function() {
+        document.getElementById('main-container').classList.add('loaded');
+    };
+</script>
+
+</body>
+</html>
